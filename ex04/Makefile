@@ -6,16 +6,16 @@
 #    By: yookamot <yookamot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 23:32:47 by okamotoyota       #+#    #+#              #
-#    Updated: 2025/08/05 14:28:14 by yookamot         ###   ########.fr        #
+#    Updated: 2025/08/05 14:59:04 by yookamot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = ex04
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
