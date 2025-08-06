@@ -6,7 +6,7 @@
 /*   By: yookamot <yookamot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 14:59:06 by yookamot          #+#    #+#             */
-/*   Updated: 2025/08/05 16:56:11 by yookamot         ###   ########.fr       */
+/*   Updated: 2025/08/06 21:11:51 by yookamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,11 @@ int main(int argc, char **argv){
     while (std::getline(inFile, line)) {
         text += line + "\n";
     }
-    std::string reText = replaceText(text, (std::string)argv[2], (std::string)argv[3]);
+    std::string reText;
+    if (argv[2][0])
+        reText = replaceText(text, (std::string)argv[2], (std::string)argv[3]);
+    else    
+        reText = text;
     std::string filename = std::string(argv[1]) + ".replace";
     std::ofstream outFile(filename.c_str());
     outFile << reText << std::flush;
